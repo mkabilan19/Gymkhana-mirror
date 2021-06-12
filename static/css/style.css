@@ -1,0 +1,31 @@
+.create-comp{
+    text-align: center;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 10px;
+}
+
+.site-form {
+    text-align: -webkit-center;
+    margin-top: 24px;
+    /* border: 1px solid #00dba0; */
+    padding: 20px;
+}
+
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 10px;
+}
+.site-form input[type="submit"]{
+    background: #00dba0;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+}

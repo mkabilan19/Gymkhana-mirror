@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from . import forms
+from .models import Complaints
 
 # Create your views here.
 def home(request):
@@ -27,3 +29,14 @@ def welfare(request):
 
 def cultural(request):
     return render(request, 'cultural.html')
+
+
+def complaint(request):
+    if request.method == 'POST':
+        form = forms.ComplaintForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = forms.ComplaintForm()
+    return render(request, 'complaint.html', {'form': form})

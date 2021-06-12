@@ -11,4 +11,5 @@ urlpatterns = [
     path('cultural',views.cultural,name='cultural'),
     path('sports',views.sports,name='sports'),
     path('welfare',views.welfare,name='welfare'),
+    path('complaint',views.complaint,name='complaint'),
 ]

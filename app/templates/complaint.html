@@ -1,0 +1,14 @@
+{% extends 'common.html' %}
+
+{% block title %}Complaint Form{% endblock title %}
+
+{% block body %}
+    <div class="create-comp">
+        <h2>Write a Complaint</h2>
+        <form class="site-form" action="{% url 'complaint' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+{% endblock body %}
